@@ -1,7 +1,7 @@
 {
 	"add_nics": [
 		{
-			"physical": "net1",
+			"physical": "net[number]",
 			"index": 1,
 			"nic_tag": "tag name",
 			"mac": "MAC address"
