@@ -1,0 +1,12 @@
+{
+  "update_nics": [
+    {
+      "mac": "MAC address",
+      "allow_ip_spoofing": "1",
+      "dhcp_server": "1",
+      "allow_dhcp_spoofing": "1",
+      "allow_restricted_traffic": "1",
+      "ip": "to be filled"
+    }
+  ]
+}
