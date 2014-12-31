@@ -1,0 +1,40 @@
+{
+  "brand": "kvm",
+  "vcpus": 2,
+  "ram": 1024,
+  "hostname": "pfsense",
+  "alias": "pfsense",
+  "resolvers": ["172.16.0.6", "8.8.8.8"],
+  "vnc_port": "40000",
+  "autoboot": "false",
+  "disks": [
+    {
+      "boot": true,
+      "model": "ide",
+      "size": 4096
+    }
+  ],
+  "nics": [
+    {
+      "nic_tag": "admin",
+      "model": "e1000",
+      "ip": "172.16.0.1",
+      "netmask": "255.255.255.0",
+      "gateway": "192.168.0.1",
+      "allow_dhcp_spoofing": true,
+      "allow_ip_spoofing": true,
+      "allow_mac_spoofing": true,
+      "allow_restricted_traffic": true,
+      "primary":"1"
+    },
+    {
+      "nic_tag": "internet",
+      "model": "e1000",
+      "ip": "dhcp",
+      "allow_dhcp_spoofing": true,
+      "allow_ip_spoofing": true,
+      "allow_mac_spoofing": true,
+      "allow_restricted_traffic": true
+    }
+  ]
+}
