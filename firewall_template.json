@@ -1,0 +1,60 @@
+{
+  "brand": "kvm",
+  "vcpus": 2,
+  "ram": 1024,
+  "hostname": "firewall.nickebo.net",
+  "alias": "firewall",
+  "resolvers": ["172.16.2.3", "172.16.0.9"],
+  "vnc_port": "40000",
+  "autoboot": "true",
+  "disks": [
+    {
+      "boot": true,
+      "model": "ide",
+      "size": 4096
+    }
+  ],
+  "nics": [
+    {
+      "nic_tag": "admin",
+      "model": "e1000",
+      "ip": "172.16.0.x",
+      "netmask": "255.255.255.0",
+      "allow_dhcp_spoofing": true,
+      "allow_ip_spoofing": true,
+      "allow_mac_spoofing": true,
+      "allow_restricted_traffic": true,
+      "primary":"1"
+    },
+    {
+      "nic_tag": "internet",
+      "model": "e1000",
+      "ip": "dhcp",
+      "allow_dhcp_spoofing": true,
+      "allow_ip_spoofing": true,
+      "allow_mac_spoofing": true,
+      "allow_restricted_traffic": true
+    }
+    {
+      "interface": "dmz0",
+      "index": 1,
+      "nic_tag": "dmz0",
+      "ip": "172.16.2.1",
+      "netmask": "255.255.0.0",
+      "allow_dhcp_spoofing": true,
+      "allow_ip_spoofing": true,
+      "allow_mac_spoofing": true,
+      "allow_restricted_traffic": true
+    }
+    {
+      "nic_tag": "admin",
+      "vlan_id": "XX",
+      "ip": "172.16.30.x",
+      "netmask": "255.255.255.0",
+      "allow_dhcp_spoofing": true,
+      "allow_ip_spoofing": true,
+      "allow_mac_spoofing": true,
+      "allow_restricted_traffic": true
+    }
+  ]
+}

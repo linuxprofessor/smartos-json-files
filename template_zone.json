@@ -1,0 +1,29 @@
+{
+ "brand": "joyent",
+ "image_uuid": "IMAGE UUID",
+  "resolvers": [
+    "172.16.2.3",
+    "172.16.0.9"
+  ],
+ "alias": "ALIAS",
+ "hostname": "FQDN",
+ "max_physical_memory": 1024,
+ "quota": 20,
+ "nics": [
+  {
+    "nic_tag": "admin",
+    "ip": "172.16.0.x",
+    "netmask": "255.255.255.0",
+    "gateway": "172.16.0.1",
+    "allow_dhcp_spoofing": true,
+    "allow_ip_spoofing": true,
+    "allow_mac_spoofing": true,
+    "allow_restricted_traffic": true
+  }
+ ],
+
+  "customer_metadata": {
+    "root_authorized_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCxNVUPqe7NzVsJFuBJcySxdSTBThWVX0jPe4FRtRA0SybgEjXvrIklpw/5T1OKO0bKjxRBW9OgY31NO1SQKdoURyVz/t3pvrlZGSEwE1LGPofoQGiNSGvpwJ4u86MDFeoYR0+zqismKXXd9ilQhp2/SuDZzTYetQbZYCIfZnVUHkiwv0OpIe32N966vKMrG6ytKaObkrKqOR/oVM3bvWwVMA3fq1ppHYMmtPYFyUUPFEfJrCQ9MaFtCF12QMFncHoCxcNZDMzJtTIlbiRfpFjIvji20a5n5LAeG41EgbYkWU/DC8z46Kk8SqZlus4AgxyW2grmUp6QSDEBEINiEwhkf3wo6YB3BFnhhSS2V+8q9XHmUlTNRvRIXbzNsJjU3hj5n0KFa/t84NdOuqUqyDDgJllHuZNOwrKN9biOB+ZEQUt3toifjGlOjUkC+nSS7ZxyJCkEAlrtBQ5j6tWeTxMnXas/zCmR/J+pBww0cVwX2Z8bZz064+K3OgJIihBpAIFZxFlGXzWsrI72Izr0VACZo25oEqqgBcI8qO7ZfNKfn5fcJir+dTVEBJTTM5aaXKcGgVIsc9sYzNRyphc1zZfre46kd/pwt4JbvxXFXLrwszcZh9VXIgFZjqwMA/gA08XWWoMZo95u9kmaATnrazIDtum9IFU3BkUkooAxHPJeOQ== marcus@nickebo",
+    "user-script": "/usr/sbin/mdata-get root_authorized_keys > ~root/.ssh/authorized_keys; chmod 600 ~root/.ssh/authorized_keys"
+   }
+}
